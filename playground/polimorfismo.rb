@@ -28,6 +28,18 @@ class Franquia
     end
 end
 
+class Restaurante < Franquia
+    def info
+        super
+        puts "Restaurante Fasano"
+    end
+end
+
+def teste_heranca_super
+    restaurante = Restaurante.new
+    restaurante.info
+end
+
 def teste_polimorfismo
     puts "teste de polimorfismo... "
     pato1 = Pato.new
@@ -45,3 +57,4 @@ end
 
 teste_heranca
 teste_polimorfismo
+teste_heranca_super
