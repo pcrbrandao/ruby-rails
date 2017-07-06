@@ -1,8 +1,8 @@
-app/models/prato.rb cbcbfa9eaae2538910639afe85dc11cf573b479d
-app/models/cliente.rb 4cb6ba6320471ced5f339fe77ba7737010158b86
-app/models/receita.rb 5726115526d00eda20b037e9c83b6b5f6696860a
-app/models/restaurante.rb 739e02cdc6a387bb1ee83ee33ede469352f7e67a
-app/models/qualificacao.rb e309d574084f7300de845755c6ef5dff5b215d6a
+app/models/prato.rb c05cce4a61cbdbc169f5f617a59be425e3512b53
+app/models/cliente.rb e5563255bba737d6bb7d06a6b8f69062433eed70
+app/models/receita.rb c87a46c8aca15ecfa93219d4b65a39238f608ddd
+app/models/restaurante.rb 112d187660c3df4fe588e7d27e1b0248b457a7b3
+app/models/qualificacao.rb 3d31120ac654ef2989fc2fe7a5bbe25059a00acf
 app/jobs/application_job.rb 9a24c3e30cfb517943d8774df4695ba794bfd69d
 app/models/application_record.rb b40193a5447806d689d114a0f55f392ae7c199e4
 app/helpers/application_helper.rb eef3d3adce96afe8b14c19b6135323f47543d979
