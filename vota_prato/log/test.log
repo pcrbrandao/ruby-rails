@@ -2255,3 +2255,321 @@ RestauranteTest: test_first_deve_retornar_o_primeiro
   [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "restaurantes" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "restaurantes"[0m
+  [1m[36mFixture Insert (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:07:25.784891', '2017-07-06 13:07:25.784891', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:07:25.784891', '2017-07-06 13:07:25.784891', 298486374)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mselect MAX("id") from "restaurantes"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "restaurantes" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_criado
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.6ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:07:25.829876"], ["updated_at", "2017-07-06 13:07:25.829876"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+RestauranteTest: test_first_deve_retornar_o_primeiro
+----------------------------------------------------
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:07:25.839856"], ["updated_at", "2017-07-06 13:07:25.839856"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "restaurantes" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "restaurantes" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:29:29.458628', '2017-07-06 13:29:29.458628', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:29:29.458628', '2017-07-06 13:29:29.458628', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mselect MAX("id") from "restaurantes"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "restaurantes" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+RestauranteTest: test_first_deve_retornar_o_primeiro
+----------------------------------------------------
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:29:29.495143"], ["updated_at", "2017-07-06 13:29:29.495143"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_valido
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:29:29.505360"], ["updated_at", "2017-07-06 13:29:29.505360"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 AND ("restaurantes"."id" != $2) LIMIT $3[0m  [["nome", "Fasano"], ["id", 980190964], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "restaurantes" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:30:05.076885', '2017-07-06 13:30:05.076885', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:30:05.076885', '2017-07-06 13:30:05.076885', 298486374)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mselect MAX("id") from "restaurantes"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "restaurantes" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_criado
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:30:05.115704"], ["updated_at", "2017-07-06 13:30:05.115704"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_valido
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:30:05.128765"], ["updated_at", "2017-07-06 13:30:05.128765"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 AND ("restaurantes"."id" != $2) LIMIT $3[0m  [["nome", "Fasano"], ["id", 980190964], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 AND ("restaurantes"."id" != $2) LIMIT $3[0m  [["endereco", "End2"], ["id", 980190964], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+RestauranteTest: test_first_deve_retornar_o_primeiro
+----------------------------------------------------
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:30:05.139400"], ["updated_at", "2017-07-06 13:30:05.139400"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "restaurantes" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:32:11.084978', '2017-07-06 13:32:11.084978', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:32:11.084978', '2017-07-06 13:32:11.084978', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mselect MAX("id") from "restaurantes"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "restaurantes" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_criado
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:32:11.125093"], ["updated_at", "2017-07-06 13:32:11.125093"], ["especialidade", "Esp2"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+RestauranteTest: test_first_deve_retornar_o_primeiro
+----------------------------------------------------
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:32:11.139448"], ["updated_at", "2017-07-06 13:32:11.139448"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_valido
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:32:11.151442"], ["updated_at", "2017-07-06 13:32:11.151442"], ["especialidade", "Esp2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 AND ("restaurantes"."id" != $2) LIMIT $3[0m  [["nome", "Fasano"], ["id", 980190965], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 AND ("restaurantes"."id" != $2) LIMIT $3[0m  [["endereco", "End2"], ["id", 980190965], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+RestauranteTest: test_restaurante_vazio_deve_ser_invalido
+---------------------------------------------------------
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "restaurantes" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:42:57.637614', '2017-07-06 13:42:57.637614', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "restaurantes" ("created_at", "updated_at", "id") VALUES ('2017-07-06 13:42:57.637614', '2017-07-06 13:42:57.637614', 298486374)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mselect MAX("id") from "restaurantes"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "restaurantes" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+RestauranteTest: test_restaurante_vazio_deve_ser_invalido
+---------------------------------------------------------
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+RestauranteTest: test_first_deve_retornar_o_primeiro
+----------------------------------------------------
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:42:57.692724"], ["updated_at", "2017-07-06 13:42:57.692724"], ["especialidade", "Esp2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+RestauranteTest: test_pluralize
+-------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_valido
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:42:57.713394"], ["updated_at", "2017-07-06 13:42:57.713394"], ["especialidade", "Esp2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 AND ("restaurantes"."id" != $2) LIMIT $3[0m  [["nome", "Fasano"], ["id", 980190964], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 AND ("restaurantes"."id" != $2) LIMIT $3[0m  [["endereco", "End2"], ["id", 980190964], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+RestauranteTest: test_restaurante_deve_ser_criado
+-------------------------------------------------
+  [1m[36mRestaurante Load (0.6ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "End2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Fasano"], ["endereco", "End2"], ["created_at", "2017-07-06 13:42:57.725495"], ["updated_at", "2017-07-06 13:42:57.725495"], ["especialidade", "Esp2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Fasano"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
