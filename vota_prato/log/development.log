@@ -437,3 +437,355 @@ Processing by OlaMundoController#index as HTML
 Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-08 10:09:09 -0300
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/pcrbrandao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pcrbrandao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 25ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-08 10:09:15 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/pcrbrandao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pcrbrandao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ola" for 127.0.0.1 at 2017-07-08 10:09:17 -0300
+Processing by OlaMundoController#index as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ola" for 127.0.0.1 at 2017-07-08 10:09:17 -0300
+Processing by OlaMundoController#index as HTML
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-08 10:19:58 -0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  Rendering restaurantes/index.html.erb within layouts/application
+  Rendered restaurantes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 903ms (Views: 893.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-08 10:41:48 -0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/pcrbrandao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pcrbrandao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 25ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-08 10:41:51 -0300
+Processing by RestaurantesController#index as HTML
+  Rendering restaurantes/index.html.erb within layouts/application
+  Rendered restaurantes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 188ms (Views: 187.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-08 10:42:52 -0300
+Processing by RestaurantesController#index as HTML
+  Rendering restaurantes/index.html.erb within layouts/application
+  Rendered restaurantes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-08 12:44:44 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (2.6ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."nome" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 277ms (Views: 228.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-08 12:50:23 -0300
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (1.6ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."nome" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."nome" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mRestaurante Load (0.8ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."nome" ASC LIMIT $1[0m  [["LIMIT", 11]]
+NameError (undefined local variable or method `restaurantes' for #<RestaurantesController:0x007f9d65328728>
+Did you mean?  @restaurantes):
+  
+app/controllers/restaurantes_controller.rb:6:in `index'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-08 12:51:15 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 0"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 0 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (11.9ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 0"], ["endereco", "Rua 0 de setembro"], ["created_at", "2017-07-08 15:51:16.405888"], ["updated_at", "2017-07-08 15:51:16.405888"], ["especialidade", "vegetariano"]]
+  [1m[35m (87.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 1"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 1 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 1"], ["endereco", "Rua 1 de setembro"], ["created_at", "2017-07-08 15:51:16.511216"], ["updated_at", "2017-07-08 15:51:16.511216"], ["especialidade", "massas"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 2"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 2 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 2"], ["endereco", "Rua 2 de setembro"], ["created_at", "2017-07-08 15:51:16.516253"], ["updated_at", "2017-07-08 15:51:16.516253"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 3"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 3 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 3"], ["endereco", "Rua 3 de setembro"], ["created_at", "2017-07-08 15:51:16.521598"], ["updated_at", "2017-07-08 15:51:16.521598"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 4"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 4 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 4"], ["endereco", "Rua 4 de setembro"], ["created_at", "2017-07-08 15:51:16.527021"], ["updated_at", "2017-07-08 15:51:16.527021"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 5"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 5 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 5"], ["endereco", "Rua 5 de setembro"], ["created_at", "2017-07-08 15:51:16.531752"], ["updated_at", "2017-07-08 15:51:16.531752"], ["especialidade", "japonês"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 6"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 6 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 6"], ["endereco", "Rua 6 de setembro"], ["created_at", "2017-07-08 15:51:16.537056"], ["updated_at", "2017-07-08 15:51:16.537056"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 7"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 7 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 7"], ["endereco", "Rua 7 de setembro"], ["created_at", "2017-07-08 15:51:16.542413"], ["updated_at", "2017-07-08 15:51:16.542413"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 8"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 8 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 8"], ["endereco", "Rua 8 de setembro"], ["created_at", "2017-07-08 15:51:16.548713"], ["updated_at", "2017-07-08 15:51:16.548713"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 9"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 9 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 9"], ["endereco", "Rua 9 de setembro"], ["created_at", "2017-07-08 15:51:16.555837"], ["updated_at", "2017-07-08 15:51:16.555837"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 10"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 10 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 10"], ["endereco", "Rua 10 de setembro"], ["created_at", "2017-07-08 15:51:16.561216"], ["updated_at", "2017-07-08 15:51:16.561216"], ["especialidade", "japonês"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 11"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 11 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 11"], ["endereco", "Rua 11 de setembro"], ["created_at", "2017-07-08 15:51:16.565935"], ["updated_at", "2017-07-08 15:51:16.565935"], ["especialidade", "japonês"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 12"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 12 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 12"], ["endereco", "Rua 12 de setembro"], ["created_at", "2017-07-08 15:51:16.571449"], ["updated_at", "2017-07-08 15:51:16.571449"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 13"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 13 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 13"], ["endereco", "Rua 13 de setembro"], ["created_at", "2017-07-08 15:51:16.576264"], ["updated_at", "2017-07-08 15:51:16.576264"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 14"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 14 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 14"], ["endereco", "Rua 14 de setembro"], ["created_at", "2017-07-08 15:51:16.581001"], ["updated_at", "2017-07-08 15:51:16.581001"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 15"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 15 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 15"], ["endereco", "Rua 15 de setembro"], ["created_at", "2017-07-08 15:51:16.586022"], ["updated_at", "2017-07-08 15:51:16.586022"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 16"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 16 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 16"], ["endereco", "Rua 16 de setembro"], ["created_at", "2017-07-08 15:51:16.592488"], ["updated_at", "2017-07-08 15:51:16.592488"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 17"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 17 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 17"], ["endereco", "Rua 17 de setembro"], ["created_at", "2017-07-08 15:51:16.598236"], ["updated_at", "2017-07-08 15:51:16.598236"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 18"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 18 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 18"], ["endereco", "Rua 18 de setembro"], ["created_at", "2017-07-08 15:51:16.604981"], ["updated_at", "2017-07-08 15:51:16.604981"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 19"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 19 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 19"], ["endereco", "Rua 19 de setembro"], ["created_at", "2017-07-08 15:51:16.609826"], ["updated_at", "2017-07-08 15:51:16.609826"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 20"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 20 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 20"], ["endereco", "Rua 20 de setembro"], ["created_at", "2017-07-08 15:51:16.614838"], ["updated_at", "2017-07-08 15:51:16.614838"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 21"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 21 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 21"], ["endereco", "Rua 21 de setembro"], ["created_at", "2017-07-08 15:51:16.620111"], ["updated_at", "2017-07-08 15:51:16.620111"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 22"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 22 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 22"], ["endereco", "Rua 22 de setembro"], ["created_at", "2017-07-08 15:51:16.625180"], ["updated_at", "2017-07-08 15:51:16.625180"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 23"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 23 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 23"], ["endereco", "Rua 23 de setembro"], ["created_at", "2017-07-08 15:51:16.630223"], ["updated_at", "2017-07-08 15:51:16.630223"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 24"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 24 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 24"], ["endereco", "Rua 24 de setembro"], ["created_at", "2017-07-08 15:51:16.635159"], ["updated_at", "2017-07-08 15:51:16.635159"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 25"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 25 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 25"], ["endereco", "Rua 25 de setembro"], ["created_at", "2017-07-08 15:51:16.641056"], ["updated_at", "2017-07-08 15:51:16.641056"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 26"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 26 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 26"], ["endereco", "Rua 26 de setembro"], ["created_at", "2017-07-08 15:51:16.647352"], ["updated_at", "2017-07-08 15:51:16.647352"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 27"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 27 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 27"], ["endereco", "Rua 27 de setembro"], ["created_at", "2017-07-08 15:51:16.653425"], ["updated_at", "2017-07-08 15:51:16.653425"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 28"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 28 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 28"], ["endereco", "Rua 28 de setembro"], ["created_at", "2017-07-08 15:51:16.658352"], ["updated_at", "2017-07-08 15:51:16.658352"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 29"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 29 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 29"], ["endereco", "Rua 29 de setembro"], ["created_at", "2017-07-08 15:51:16.663258"], ["updated_at", "2017-07-08 15:51:16.663258"], ["especialidade", "massas"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 30"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 30 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 30"], ["endereco", "Rua 30 de setembro"], ["created_at", "2017-07-08 15:51:16.668115"], ["updated_at", "2017-07-08 15:51:16.668115"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 31"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 31 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 31"], ["endereco", "Rua 31 de setembro"], ["created_at", "2017-07-08 15:51:16.673266"], ["updated_at", "2017-07-08 15:51:16.673266"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 32"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 32 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 32"], ["endereco", "Rua 32 de setembro"], ["created_at", "2017-07-08 15:51:16.678121"], ["updated_at", "2017-07-08 15:51:16.678121"], ["especialidade", "massas"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 33"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 33 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 33"], ["endereco", "Rua 33 de setembro"], ["created_at", "2017-07-08 15:51:16.683287"], ["updated_at", "2017-07-08 15:51:16.683287"], ["especialidade", "massas"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 34"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 34 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 34"], ["endereco", "Rua 34 de setembro"], ["created_at", "2017-07-08 15:51:16.690081"], ["updated_at", "2017-07-08 15:51:16.690081"], ["especialidade", "massas"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 35"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 35 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 35"], ["endereco", "Rua 35 de setembro"], ["created_at", "2017-07-08 15:51:16.695777"], ["updated_at", "2017-07-08 15:51:16.695777"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 36"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 36 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 36"], ["endereco", "Rua 36 de setembro"], ["created_at", "2017-07-08 15:51:16.701521"], ["updated_at", "2017-07-08 15:51:16.701521"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 37"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 37 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 37"], ["endereco", "Rua 37 de setembro"], ["created_at", "2017-07-08 15:51:16.708748"], ["updated_at", "2017-07-08 15:51:16.708748"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 38"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 38 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 38"], ["endereco", "Rua 38 de setembro"], ["created_at", "2017-07-08 15:51:16.713879"], ["updated_at", "2017-07-08 15:51:16.713879"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 39"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 39 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 39"], ["endereco", "Rua 39 de setembro"], ["created_at", "2017-07-08 15:51:16.719672"], ["updated_at", "2017-07-08 15:51:16.719672"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 40"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 40 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 40"], ["endereco", "Rua 40 de setembro"], ["created_at", "2017-07-08 15:51:16.726154"], ["updated_at", "2017-07-08 15:51:16.726154"], ["especialidade", "massas"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 41"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 41 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 41"], ["endereco", "Rua 41 de setembro"], ["created_at", "2017-07-08 15:51:16.733602"], ["updated_at", "2017-07-08 15:51:16.733602"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 42"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 42 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 42"], ["endereco", "Rua 42 de setembro"], ["created_at", "2017-07-08 15:51:16.741322"], ["updated_at", "2017-07-08 15:51:16.741322"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 43"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 43 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 43"], ["endereco", "Rua 43 de setembro"], ["created_at", "2017-07-08 15:51:16.746768"], ["updated_at", "2017-07-08 15:51:16.746768"], ["especialidade", "japonês"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 44"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 44 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 44"], ["endereco", "Rua 44 de setembro"], ["created_at", "2017-07-08 15:51:16.752351"], ["updated_at", "2017-07-08 15:51:16.752351"], ["especialidade", "massas"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 45"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 45 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 45"], ["endereco", "Rua 45 de setembro"], ["created_at", "2017-07-08 15:51:16.758790"], ["updated_at", "2017-07-08 15:51:16.758790"], ["especialidade", "japonês"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 46"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 46 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 46"], ["endereco", "Rua 46 de setembro"], ["created_at", "2017-07-08 15:51:16.765400"], ["updated_at", "2017-07-08 15:51:16.765400"], ["especialidade", "japonês"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 47"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 47 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 47"], ["endereco", "Rua 47 de setembro"], ["created_at", "2017-07-08 15:51:16.770645"], ["updated_at", "2017-07-08 15:51:16.770645"], ["especialidade", "japonês"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 48"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 48 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 48"], ["endereco", "Rua 48 de setembro"], ["created_at", "2017-07-08 15:51:16.776420"], ["updated_at", "2017-07-08 15:51:16.776420"], ["especialidade", "massas"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."nome" = $1 LIMIT $2[0m  [["nome", "Restaurante 49"], ["LIMIT", 1]]
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" WHERE "restaurantes"."endereco" = $1 LIMIT $2[0m  [["endereco", "Rua 49 de setembro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "restaurantes" ("nome", "endereco", "created_at", "updated_at", "especialidade") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Restaurante 49"], ["endereco", "Rua 49 de setembro"], ["created_at", "2017-07-08 15:51:16.785124"], ["updated_at", "2017-07-08 15:51:16.785124"], ["especialidade", "vegetariano"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."nome" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 733ms (Views: 284.7ms | ActiveRecord: 221.6ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-08 12:52:32 -0300
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.1ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 341ms (Views: 290.9ms | ActiveRecord: 10.1ms)
+
+
