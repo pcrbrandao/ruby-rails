@@ -21,8 +21,13 @@
                             <%= link_to 'Deletar', {action: 'destroy', id: restaurante},
                                 {method: "delete"} %>
                         </td>
+                        <td>
+                            <%= link_to 'Editar', action: 'edit', id: restaurante %>
+                        </td>
                     </tr>
                 <% end %>
             </table>
+            <br/>
+            <%= link_to 'Novo', action: 'new' %>
     </body>
 </html>
