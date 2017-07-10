@@ -789,3 +789,108 @@ Processing by RestaurantesController#index as HTML
 Completed 200 OK in 341ms (Views: 290.9ms | ActiveRecord: 10.1ms)
 
 
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-09 10:33:27 -0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.9ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 438ms (Views: 373.2ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/restaurantes/1" for 127.0.0.1 at 2017-07-09 10:33:31 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering restaurantes/show.html.erb within layouts/application
+  Rendered restaurantes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 51ms (Views: 38.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurantes/5" for 127.0.0.1 at 2017-07-09 10:33:38 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurante Load (0.9ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurantes/show.html.erb within layouts/application
+  Rendered restaurantes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-09 10:50:55 -0300
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.8ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 443ms (Views: 378.0ms | ActiveRecord: 12.4ms)
+
+
+Started DELETE "/restaurantes/8" for 127.0.0.1 at 2017-07-09 10:51:03 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l0It82hWLLhs21q7F/QnjgzXnZZarFGyrAGkNjaDlF2cZ+hjFBdfm7IcwG6TuWBmiITEUqsHJzfEOu5BA+yEDA==", "id"=>"8"}
+  [1m[36mRestaurante Load (1.1ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 25.0ms)
+
+
+  
+NoMethodError (undefined method `validades_uniqueness_of' for #<Class:0x007f892fe1c660>
+Did you mean?  validates_uniqueness_of):
+  
+app/models/prato.rb:3:in `<class:Prato>'
+app/models/prato.rb:1:in `<top (required)>'
+app/controllers/restaurantes_controller.rb:24:in `destroy'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-09 10:52:19 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.9ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 108ms (Views: 79.4ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/restaurantes/1" for 127.0.0.1 at 2017-07-09 10:52:31 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"98I3/15BKQ/re/jgBoKjCcAGI3cWVOALnuVQx3OoChP85/JvIgBaLDW8YjWCz+ThRFV6s+f/lo723hqwRscaQg==", "id"=>"1"}
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[31mDELETE FROM "pratos_restaurantes" WHERE "pratos_restaurantes"."restaurante_id" = $1[0m  [["restaurante_id", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 1]]
+  [1m[35m (79.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 145ms (ActiveRecord: 90.8ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-09 10:52:31 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.8ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/restaurantes/50" for 127.0.0.1 at 2017-07-09 10:52:52 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EEhp4jB4KJGnHn5JOY9ThJvv8wX7gINNr/jKECKbT8EbbaxyTDlbsnnZ5Jy9whRsH7yqwQor9cjHw4BnF/RfkA==", "id"=>"50"}
+  [1m[36mRestaurante Load (0.6ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pratos_restaurantes" WHERE "pratos_restaurantes"."restaurante_id" = $1[0m  [["restaurante_id", 50]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "restaurantes" WHERE "restaurantes"."id" = $1[0m  [["id", 50]]
+  [1m[35m (98.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 107ms (ActiveRecord: 100.8ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-09 10:52:52 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 1.1ms)
+
+
