@@ -2942,3 +2942,236 @@ Processing by RestaurantesController#index as HTML
 Completed 200 OK in 89ms (Views: 81.0ms | ActiveRecord: 2.1ms)
 
 
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6394428223403034255);[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComentarios (20170711220707)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.5ms)[0m  [1m[35mCREATE TABLE "comentarios" ("id" bigserial primary key, "conteudo" text, "comentavel_id" integer, "comentavel_type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_comentarios_on_comentavel_type" ON "comentarios"  ("comentavel_type")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_comentarios_on_comentavel_id" ON "comentarios"  ("comentavel_id")[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170711220707"]]
+  [1m[35m (95.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6394428223403034255)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/comentarios" for 127.0.0.1 at 2017-07-11 19:15:20 -0300
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ComentariosController#index as HTML
+  Rendering comentarios/index.html.erb within layouts/application
+  [1m[36mComentario Load (1.7ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios"[0m
+  Rendered comentarios/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 388ms (Views: 365.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/comentarios/new" for 127.0.0.1 at 2017-07-11 19:15:24 -0300
+Processing by ComentariosController#new as HTML
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (21.5ms)
+  Rendered comentarios/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 87ms (Views: 64.6ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:16:00 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GH1sjIYDc5Bm1lpYhNqOTEVZR9YG/bcZV0CTZ13+bWbY/mhCx9rpU6ETwkZqD8vwqdk/QldcLdyEHosFO51VnA==", "comentario"=>{"conteudo"=>"comentário 1", "comentavel_id"=>"1", "comentavel_type"=>"comentava 1"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (wrong constant name comentava 1):
+  
+app/controllers/comentarios_controller.rb:30:in `block in create'
+app/controllers/comentarios_controller.rb:29:in `create'
+Started GET "/comentarios/new" for 127.0.0.1 at 2017-07-11 19:16:52 -0300
+Processing by ComentariosController#new as HTML
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (4.9ms)
+  Rendered comentarios/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:17:43 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ijYm/GHCOx9XppSKjpUnKzMi/wnvCBUBblEKIkuZy8qq9xVsF6SL7qbAkzE7xEgQEzzaHYdupHW51xK701f1Q==", "comentario"=>{"conteudo"=>"comentario 1", "comentavel_id"=>"", "comentavel_type"=>"qualificacao"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (3.2ms)
+  Rendered comentarios/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 68ms (Views: 62.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:17:56 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5E2WV4s/5ySTF9fgd87ZkgqiZoNQeSxKmR5TpmcXW9JbUxzr3isa7iq917hu+1MZ2iZp5pp3bqsxWG5NM7ExBQ==", "comentario"=>{"conteudo"=>"comentario 1", "comentavel_id"=>"1", "comentavel_type"=>"qualificacao"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (wrong constant name qualificacao):
+  
+app/controllers/comentarios_controller.rb:30:in `block in create'
+app/controllers/comentarios_controller.rb:29:in `create'
+Started GET "/comentarios" for 127.0.0.1 at 2017-07-11 19:18:09 -0300
+Processing by ComentariosController#index as HTML
+  Rendering comentarios/index.html.erb within layouts/application
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios"[0m
+  Rendered comentarios/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:18:29 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5E2WV4s/5ySTF9fgd87ZkgqiZoNQeSxKmR5TpmcXW9JbUxzr3isa7iq917hu+1MZ2iZp5pp3bqsxWG5NM7ExBQ==", "comentario"=>{"conteudo"=>"comentario 1", "comentavel_id"=>"2", "comentavel_type"=>"restaurante"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (wrong constant name restaurante):
+  
+app/controllers/comentarios_controller.rb:30:in `block in create'
+app/controllers/comentarios_controller.rb:29:in `create'
+Started GET "/comentarios/new" for 127.0.0.1 at 2017-07-11 19:19:03 -0300
+Processing by ComentariosController#new as HTML
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (2.7ms)
+  Rendered comentarios/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:19:32 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3KubJUyr3cp09JJs+AiWN7jalRbDxM3mDulxT5+gOsEcKJ/rDXJHCbMxCnIW3dOLVFrtgpJlVyPdt2kt+cMCOw==", "comentario"=>{"conteudo"=>"Conteúdo 1", "comentavel_id"=>"1", "comentavel_type"=>"Restaurante"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (2.6ms)
+  Rendered comentarios/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 89ms (Views: 41.4ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:19:41 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ob8/Mmyt9nFLIrRPQUMY9oxvWJt+eqGuZOXlNZA4UfgeobWOObkLu/KItBdYdpJ9XOtX/rR040/Mo9jexJ47Lw==", "comentario"=>{"conteudo"=>"Conteúdo 1", "comentavel_id"=>"2", "comentavel_type"=>"Restaurante"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "comentarios" ("conteudo", "comentavel_id", "comentavel_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conteudo", "Conteúdo 1"], ["comentavel_id", 2], ["comentavel_type", "Restaurante"], ["created_at", "2017-07-11 22:19:41.056685"], ["updated_at", "2017-07-11 22:19:41.056685"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/comentarios/1
+Completed 302 Found in 19ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/comentarios/1" for 127.0.0.1 at 2017-07-11 19:19:41 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT  "comentarios".* FROM "comentarios" WHERE "comentarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering comentarios/show.html.erb within layouts/application
+  Rendered comentarios/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comentarios" for 127.0.0.1 at 2017-07-11 19:19:50 -0300
+Processing by ComentariosController#index as HTML
+  Rendering comentarios/index.html.erb within layouts/application
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios"[0m
+  Rendered comentarios/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comentarios/new" for 127.0.0.1 at 2017-07-11 19:19:56 -0300
+Processing by ComentariosController#new as HTML
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (2.7ms)
+  Rendered comentarios/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:20:10 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zHbI+wx+hCIwwUjWK3Vw1M589Z0vxvWcMWVCwglpATEM9cw1Tace4fcE0MjFoDVoIvyNCX5nb1niO1qgbwo5yw==", "comentario"=>{"conteudo"=>"Conteúdo 2", "comentavel_id"=>"3", "comentavel_type"=>"Restaurante"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comentarios" ("conteudo", "comentavel_id", "comentavel_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conteudo", "Conteúdo 2"], ["comentavel_id", 3], ["comentavel_type", "Restaurante"], ["created_at", "2017-07-11 22:20:10.851080"], ["updated_at", "2017-07-11 22:20:10.851080"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/comentarios/2
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/comentarios/2" for 127.0.0.1 at 2017-07-11 19:20:10 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT  "comentarios".* FROM "comentarios" WHERE "comentarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering comentarios/show.html.erb within layouts/application
+  Rendered comentarios/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/comentarios" for 127.0.0.1 at 2017-07-11 19:20:13 -0300
+Processing by ComentariosController#index as HTML
+  Rendering comentarios/index.html.erb within layouts/application
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios"[0m
+  Rendered comentarios/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/comentarios/new" for 127.0.0.1 at 2017-07-11 19:20:18 -0300
+Processing by ComentariosController#new as HTML
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (3.2ms)
+  Rendered comentarios/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comentarios" for 127.0.0.1 at 2017-07-11 19:20:34 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AybgeP4QARxOMFOCEQFvPBIg/3QwMjxNvQjOhJEMCFPDpeS2v8mb34n1y5z/1CqA/qCH4GGTpohuVtbm928wqQ==", "comentario"=>{"conteudo"=>"Conteúdo 4", "comentavel_id"=>"6", "comentavel_type"=>"Restaurante"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "comentarios" ("conteudo", "comentavel_id", "comentavel_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conteudo", "Conteúdo 4"], ["comentavel_id", 6], ["comentavel_type", "Restaurante"], ["created_at", "2017-07-11 22:20:34.541486"], ["updated_at", "2017-07-11 22:20:34.541486"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/comentarios/3
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/comentarios/3" for 127.0.0.1 at 2017-07-11 19:20:34 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT  "comentarios".* FROM "comentarios" WHERE "comentarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering comentarios/show.html.erb within layouts/application
+  Rendered comentarios/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comentarios" for 127.0.0.1 at 2017-07-11 19:20:36 -0300
+Processing by ComentariosController#index as HTML
+  Rendering comentarios/index.html.erb within layouts/application
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios"[0m
+  Rendered comentarios/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comentarios/new" for 127.0.0.1 at 2017-07-11 19:20:40 -0300
+Processing by ComentariosController#new as HTML
+  Rendering comentarios/new.html.erb within layouts/application
+  Rendered comentarios/_form.html.erb (3.1ms)
+  Rendered comentarios/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comentarios" for 127.0.0.1 at 2017-07-11 19:20:45 -0300
+Processing by ComentariosController#index as HTML
+  Rendering comentarios/index.html.erb within layouts/application
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios"[0m
+  Rendered comentarios/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
