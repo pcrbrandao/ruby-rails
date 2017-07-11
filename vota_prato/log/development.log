@@ -2882,3 +2882,63 @@ Processing by QualificacoesController#index as HTML
 Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-11 18:27:07 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.3ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 166ms (Views: 138.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-11 18:27:08 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.0ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 128ms (Views: 120.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2017-07-11 18:27:11 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.6ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurantes/show.html.erb within layouts/application
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT AVG("qualificacoes"."nota") FROM "qualificacoes" WHERE "qualificacoes"."restaurante_id" = $1[0m  [["restaurante_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "qualificacoes" WHERE "qualificacoes"."restaurante_id" = $1[0m  [["restaurante_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("qualificacoes"."valor_gasto") FROM "qualificacoes" WHERE "qualificacoes"."restaurante_id" = $1[0m  [["restaurante_id", 2]]
+  Rendered restaurantes/show.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 77ms (Views: 62.8ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-11 18:27:19 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.8ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 90ms (Views: 83.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/restaurantes/3" for 127.0.0.1 at 2017-07-11 18:27:21 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering restaurantes/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT AVG("qualificacoes"."nota") FROM "qualificacoes" WHERE "qualificacoes"."restaurante_id" = $1[0m  [["restaurante_id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "qualificacoes" WHERE "qualificacoes"."restaurante_id" = $1[0m  [["restaurante_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("qualificacoes"."valor_gasto") FROM "qualificacoes" WHERE "qualificacoes"."restaurante_id" = $1[0m  [["restaurante_id", 3]]
+  Rendered restaurantes/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 57ms (Views: 49.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-11 18:27:27 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.1ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 89ms (Views: 81.0ms | ActiveRecord: 2.1ms)
+
+
