@@ -1,7 +1,7 @@
 class RestaurantesController < ApplicationController
     def index
-        # render "index"
         @restaurantes = Restaurante.order :id
+
         # somente durante a faze de testes
         if @restaurantes.empty?
             especialidades = %w{massas japonês vegetariano}
@@ -13,10 +13,22 @@ class RestaurantesController < ApplicationController
                 )
             end
         end
+
+        respond_to do |format|
+            format.html
+            format.xml {render xml: @restaurantes}
+            format.json {render json: @restaurantes}
+        end
     end
 
     def show
         @restaurante = Restaurante.find(params[:id])
+
+        respond_to do |format|
+            format.html
+            format.json {render json: @restaurante}
+            format.xml {render xml: @restaurante}
+        end
     end
 
     def destroy
