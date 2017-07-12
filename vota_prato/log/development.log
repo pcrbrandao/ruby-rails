@@ -4195,3 +4195,568 @@ Processing by RestaurantesController#show as HTML
 Completed 200 OK in 71ms (Views: 63.1ms | ActiveRecord: 3.3ms)
 
 
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:03:54 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.2ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (73.3ms)
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:03:54 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+Completed 200 OK in 248ms (Views: 217.4ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mRestaurante Load (2.0ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 183ms (Views: 137.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2017-07-12 14:04:05 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 52ms (Views: 45.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2017-07-12 14:04:08 -0300
+Processing by QualificacoesController#index as HTML
+  Rendering qualificacoes/index.html.erb within layouts/application
+  [1m[36mQualificacao Load (0.6ms)[0m  [1m[34mSELECT "qualificacoes".* FROM "qualificacoes"[0m
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Cliente Load (0.0ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.3ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered qualificacoes/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:04:10 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.5ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 103ms (Views: 95.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:09:25 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.8ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (39.8ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 9.8ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= menu_principal %w(restaurantes clientes qualificacoes) %>
+    16: 
+    17:     <%= yield %>
+    18: </body>
+  
+app/helpers/application_helper.rb:21:in `menu_principal'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2538313648536421716_70176269494820'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:11:29 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.8ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 68ms (Views: 63.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:16:13 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (31.3ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= menu_principal %w(restaurantes clientes qualificacoes) %>
+    16: 
+    17:     <%= yield %>
+    18: </body>
+  
+app/helpers/application_helper.rb:21:in `menu_principal'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2538313648536421716_70176269907520'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:17:20 -0300
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.4ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (43.7ms)
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 9.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= menu_principal %w(restaurantes clientes qualificacoes) %>
+    16: 
+    17:     <%= yield %>
+    18: </body>
+  
+app/helpers/application_helper.rb:21:in `menu_principal'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190208802900'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:20:37 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.4ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 13.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render "menu_principal",
+    16:         locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    17: 
+    18:     <%= yield %>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190170979040'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:26:51 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.2ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render "menu_principal",
+    16:         locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    17: 
+    18:     <%= yield %>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190226819620'
+Started GET "/qualificacoes" for 127.0.0.1 at 2017-07-12 14:28:33 -0300
+Processing by QualificacoesController#index as HTML
+  Rendering qualificacoes/index.html.erb within layouts/application
+  [1m[36mQualificacao Load (1.2ms)[0m  [1m[34mSELECT "qualificacoes".* FROM "qualificacoes"[0m
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Cliente Load (0.0ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered qualificacoes/index.html.erb within layouts/application (92.1ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 14.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial qualificacoes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render "menu_principal",
+    16:         locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    17: 
+    18:     <%= yield %>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190219552220'
+Started GET "/clientes" for 127.0.0.1 at 2017-07-12 14:29:52 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.7ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Missing partial clientes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <!--<%= render "menu_principal",
+    16:         locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    17:         -->
+    18: 
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190176839060'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:29:54 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (26.8ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <!--<%= render "menu_principal",
+    16:         locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    17:         -->
+    18: 
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190184478140'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:29:54 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.9ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (57.5ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <!--<%= render "menu_principal",
+    16:         locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    17:         -->
+    18: 
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190218350960'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:30:34 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (30.1ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    13: 
+    14: <body>
+    15:     <!--
+    16:         <%= render "menu_principal",
+    17:         locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    18:         -->
+    19: 
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__2016010671197038642_70190208918500'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:31:47 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (35.2ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render "menu_principal", locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    16:     <%= yield %>
+    17: </body>
+    18: 
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190195599140'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:34:42 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (25.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views/layouts/application.html.erb:27: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/layouts/application.html.erb:27: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:35:18 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.8ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 75ms (Views: 69.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:35:22 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (6.3ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 81ms (Views: 70.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2017-07-12 14:35:25 -0300
+Processing by QualificacoesController#index as HTML
+  Rendering qualificacoes/index.html.erb within layouts/application
+  [1m[36mQualificacao Load (0.7ms)[0m  [1m[34mSELECT "qualificacoes".* FROM "qualificacoes"[0m
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Cliente Load (0.0ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered qualificacoes/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2017-07-12 14:35:27 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2017-07-12 14:35:28 -0300
+Processing by QualificacoesController#index as HTML
+  Rendering qualificacoes/index.html.erb within layouts/application
+  [1m[36mQualificacao Load (0.6ms)[0m  [1m[34mSELECT "qualificacoes".* FROM "qualificacoes"[0m
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.4ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Cliente Load (0.0ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered qualificacoes/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 68ms (Views: 63.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:35:29 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.0ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 116ms (Views: 108.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:38:07 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 72ms (Views: 66.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:39:48 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (36.6ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render "menu_principal", locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    16:     <!--
+    17:     <ul>
+    18:         <% %w[clientes qualificacoes restaurantes].each do |controller_name| %>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190206621520'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:44:23 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (29.5ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render menu_principal, locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    16:     <!--
+    17:     <ul>
+    18:         <% %w[clientes qualificacoes restaurantes].each do |controller_name| %>
+  
+app/helpers/application_helper.rb:20:in `menu_principal'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190227332700'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:45:14 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial restaurantes/_menu_principal, application/_menu_principal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views"
+):
+    12: </head>
+    13: 
+    14: <body>
+    15:     <%= render 'menu_principal', locals: {opcoes: %w(restaurantes clientes qualificacoes)} %>
+    16:     <!--
+    17:     <ul>
+    18:         <% %w[clientes qualificacoes restaurantes].each do |controller_name| %>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190177150200'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:46:02 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.2ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (75.7ms)
+  Rendered layouts/_menu_principal.html.erb (288.8ms)
+Completed 500 Internal Server Error in 454ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `opcoes' for #<#<Class:0x007facd837df98>:0x007facda09cfe8>):
+    1: <ul>
+    2:     <% opcoes.each do |controller_name| %>
+    3:         <li>
+    4:             <%= link_to controller_name, controller: controller_name %>
+    5:         </li>
+  
+app/views/layouts/_menu_principal.html.erb:2:in `_app_views_layouts__menu_principal_html_erb___2776073249111066979_70190220034940'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190226445560'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:47:50 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views/layouts/application.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+opcoes: [restaurantes clientes qualificacoes]} );@output_buf
+                              ^
+/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views/layouts/application.html.erb:18: syntax error, unexpected keyword_do_block, expecting ')'
+ficacoes restaurantes].each do |controller_name| 
+                              ^
+/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/pcrbrandao/DEVProjects/RubyRepos/ruby-rails/vota_prato/app/views/layouts/application.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:18: syntax error, unexpected keyword_do_block, expecting ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:48:08 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (28.2ms)
+  Rendered layouts/_menu_principal.html.erb (337.4ms)
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `opcoes' for #<#<Class:0x007facd837df98>:0x007facda0100e8>):
+    1: <ul>
+    2:     <% opcoes.each do |controller_name| %>
+    3:         <li>
+    4:             <%= link_to controller_name, controller: controller_name %>
+    5:         </li>
+  
+app/views/layouts/_menu_principal.html.erb:2:in `_app_views_layouts__menu_principal_html_erb___2776073249111066979_70190226821700'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2016010671197038642_70190208661560'
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:50:23 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (0.7ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (38.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 108ms (Views: 78.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2017-07-12 14:50:30 -0300
+Processing by ClientesController#index as HTML
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  Rendered clientes/index.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 48.2ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2017-07-12 14:50:32 -0300
+Processing by QualificacoesController#index as HTML
+  Rendering qualificacoes/index.html.erb within layouts/application
+  [1m[36mQualificacao Load (0.7ms)[0m  [1m[34mSELECT "qualificacoes".* FROM "qualificacoes"[0m
+  [1m[36mCliente Load (0.5ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.8ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Cliente Load (0.0ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" WHERE "clientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurante Load (0.5ms)[0m  [1m[34mSELECT  "restaurantes".* FROM "restaurantes" WHERE "restaurantes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered qualificacoes/index.html.erb within layouts/application (36.5ms)
+  Rendered layouts/_menu_principal.html.erb (1.1ms)
+Completed 200 OK in 119ms (Views: 95.1ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2017-07-12 14:50:33 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurantes" LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering restaurantes/index.html.erb within layouts/application
+  [1m[36mRestaurante Load (1.1ms)[0m  [1m[34mSELECT "restaurantes".* FROM "restaurantes" ORDER BY "restaurantes"."id" ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (50.8ms)
+  Rendered layouts/_menu_principal.html.erb (1.6ms)
+Completed 200 OK in 114ms (Views: 106.3ms | ActiveRecord: 1.9ms)
+
+
