@@ -1,0 +1,8 @@
+<%= form_for Comentario.new do |f| %>
+    <%= f.hidden_field :comentavel_id, value: comentavel.id %>
+    <%= f.hidden_field :comentavel_type, value: comentavel.class %>
+    
+    <h3><%= f.label :conteudo %></h3>
+    <%= f.text_area :conteudo %><br />
+    <%= f.submit %>
+<% end %>
