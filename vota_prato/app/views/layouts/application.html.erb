@@ -9,11 +9,15 @@
     <%= stylesheet_link_tag    'application', 
                 media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <%= menu_principal %w(restaurantes clientes qualificacoes) %>
     <%= yield %>
+    <script type="text/javascript">
+        <%= yield :js %>
+    </script>
 </body>
 
 </html>
