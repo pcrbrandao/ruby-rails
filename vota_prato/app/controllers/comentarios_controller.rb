@@ -28,11 +28,12 @@ class ComentariosController < ApplicationController
 
     respond_to do |format|
       if @comentario.save
-        format.html { redirect_to @comentario, notice: 'Comentario was successfully created.' }
-        format.json { render :show, status: :created, location: @comentario }
+        # format.json { render :show, status: :created, location: @comentario }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @comentario.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -57,7 +58,7 @@ class ComentariosController < ApplicationController
     @comentario = Comentario.find(params[:id])
     @comentario.destroy
     respond_to do |format|
-      format.html { redirect_to comentarios_url, notice: 'Comentario was successfully destroyed.' }
+      # format.html { redirect_to comentarios_url, notice: 'Comentario was successfully destroyed.' }
       format.json { head :no_content }
       format.js { head :ok }
     end

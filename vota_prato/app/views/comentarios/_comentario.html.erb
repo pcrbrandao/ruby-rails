@@ -6,9 +6,8 @@
 </p>
 
 <% content_for :js do %>
-    $("#remove_comentario_<%=comentario.id%>").on("ajax:success",
-        function(){
+$("#remove_comentario_<%=comentario.id%>").on("ajax:success", 
+    function(){
             $("#comentario_<%=comentario.id%>").remove();
-        }
-    );
+    });
 <% end %>
