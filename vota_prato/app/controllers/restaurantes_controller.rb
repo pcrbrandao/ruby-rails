@@ -1,6 +1,6 @@
 class RestaurantesController < ApplicationController
     def index
-        @restaurantes = Restaurante.order :id
+        @restaurantes = Restaurante.order("nome").page(params["page"]).per(10)
 
         # somente durante a faze de testes
         if @restaurantes.empty?
