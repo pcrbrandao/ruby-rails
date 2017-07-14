@@ -9,15 +9,7 @@
 
 <% content_for :js do %>
     $("#new_comentario").on("ajax:complete", function(evt, xhr, status) {
-            console.log("completo!")
-        })
-        .on("ajax:success", function(evt, data, status, xhr) {
-            console.log("sucesso! ")
-            console.log("data..." + data);
-            console.log("xhr..." + xhr);
-        })
-        .on("ajax:error", function(evt, xhr, status, error) {
-            console.log("erro... ");
+            console.log("completo! ")
             $("#comentarios").replaceWith(xhr.responseText);
             $("#comentario_conteudo").val("");
         });
