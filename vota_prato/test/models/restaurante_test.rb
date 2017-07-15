@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class RestauranteTest < ActiveSupport::TestCase
+    fixtures :restaurantes
+
     def cria_um_restaurante
         Restaurante.destroy_all
         r = Restaurante.new 
@@ -42,5 +44,18 @@ class RestauranteTest < ActiveSupport::TestCase
     def test_pluralize
         assert "qualificacao".pluralize == "qualificacoes", "Qualificacao não está correto"
         assert "receita".pluralize == "receitas", "Receitas não estea correto"
+    end
+
+    def test_restaurante
+        restaurante = Restaurante.new(
+            :nome => restaurantes(:fasano).nome,
+            :endereco => restaurantes(:fasano).endereco,
+            :especialidade => restaurantes(:fasano).especialidade)
+
+        msg = "restaurante não foi salvo. erros: #{restaurante.errors.inspect}"
+        assert !restaurante.save, msg
+
+        restaurante_fasano_copia = Restaurante.find(restaurantes(:fasano).id)
+        assert_equal restaurante.nome, restaurante_fasano_copia.nome
     end
 end
