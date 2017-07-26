@@ -1,7 +1,4 @@
-module Screen
-    def self.clear
-        print "\e[2J\2[f"
-    end
-end
+$LOAD_PATH << '.'
+require 'screen'
 
 Screen::clear
